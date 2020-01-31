@@ -1,8 +1,10 @@
 <html><head></head>
 <body>
-<?php 
-    $day = "Friday";
-    echo("<h2> Today is $day </h2>");
-?>    
+<?php
+    $color = array("red","blue","green");
+    foreach($color as $col) {
+    echo("<li> I like $col color </li>");
+    }
+?>
 </body>
 </html>

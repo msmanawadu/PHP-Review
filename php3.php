@@ -1,8 +1,10 @@
 <html><head></head>
 <body>
 <?php
-    echo("<h1 align = center> <u> Hello World </u> </h1>");
-    echo("<p> How are you ? </p>");
+    //Associative array - method 1
+    $province = array("western"=>"colombo", "southern"=>"matara");
+    $city = $province["western"];
+    echo("I live in $city");
 ?>
 </body>
 </html>

@@ -1,7 +1,9 @@
 <html><head></head>
 <body>
-<?php 
-    echo("<h1> Hello World, I love php !</h1>");
+<?php
+    // Method 1 of numeric arrays 
+     $color = array("red", "blue", "green");
+     echo("My favourite color is $color[1]");
 ?>
 </body>
 </html>

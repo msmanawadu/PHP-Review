@@ -3,7 +3,7 @@
 <?php
     //Associative array - method 1
     $province = array("western"=>"colombo", "southern"=>"matara");
-    $city = $province["western"];
+    $city = $province["southern"];
     echo("I live in $city");
 ?>
 </body>

@@ -1,0 +1,28 @@
+<html><head></head>
+<body>
+<h1><u> Sun Ray Holiday Resorts </u></h1>
+<h2><u> Room Reservation </u></h2>
+<form name = "form1" method = "POST" action= "http://localhost:8888/five/receiver.php">
+Name : <input type = "text" name = "name"/> <br>
+Address : <input type = "text" name = "address" /> <br>
+Telephone : <input type = "text" name = "telephone" /> <br>
+Number of Rooms : <select name = "rooms">
+<option value = "1"> 1 </option>
+<option value = "2" selected> 2 </option>
+<option value = "3"> 3 </option>
+<option value = "4"> 4 </option>
+<option value= "5"> 5 </option>
+</select> <br>
+Type of Room: <br>
+<input type = "radio" name = "roomType" value = "Sea" checked> Sea Side 
+<input type = "radio" name = "roomType" value = "Hill"> Hill Side <br>
+Extras: <br>
+<input type = "checkbox" name = "extras1" value = "Meals"> Meals
+<input type = "checkbox" name = "extras2" value = "Pool"> Pool
+<input type = "checkbox" name = "extras3" value = "TV" checked> TV <br>
+
+<input type = "submit" name = "cmd1" value = "Reserve"> 
+<input type = "reset" name = "cmd2" value = "Cancel"> 
+</form>
+</body>
+</html>

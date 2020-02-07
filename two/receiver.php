@@ -1,15 +1,17 @@
-<html><head></head>
+<html>
+<head></head>
 <body>
-<h1>Receiving Data</h1>
-<?php
-    $link = $_REQUEST["type"];
-    $choice1 = $_REQUEST["choice1"];
-    $choice2 = $_REQUEST["choice2"];
-?> 
-<h2>Favourite <?php echo("$link"); echo("s");?> </h2>
-<ol>
-    <li> <?php echo("$choice1");?> </li>
-    <li> <?php echo("$choice2");?> </li>
-</ol>
+<h1> Enter Your Data </h1> 
+<form name = "form1" method = "POST" action = "http://localhost:8888/two/receiver.php">
+Name: <input type = "text" name = "uName"> <br>
+Password: <input type = "password" name = "pWord"> <br>
+<input type = "submit" name = "cmd1" value = "Submit Data">
+</form>
+<hr>
+<?php 
+$name = $_REQUEST["uName"];
+$pwd = $_REQUEST["pWord"];
+echo("Username : $name"."<br>"."Password : $pwd");
+?>    
 </body>
 </html>

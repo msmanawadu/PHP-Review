@@ -1,9 +1,11 @@
-<html><head></head>
+<html>
+<head></head>
 <body>
-<h1>Sending data to the server </h1>
-
-<a href = "http://localhost:8888/one/receiver.php?userid=1001&username=abc&status=off">
-Click the link to send the data 
-</a>
+<h1> Enter Your Data </h1> 
+<form name = "form1" method = "POST" action = "http://localhost:8888/one/receiver.php">
+Name: <input type = "text" name = "uName"> <br>
+Password: <input type = "password" name = "pWord"> <br>
+<input type = "submit" name = "cmd1" value = "Submit Data">
+</form>   
 </body>
 </html>

@@ -1,0 +1,20 @@
+<html><head></head>
+<body>
+<h1><u> Magazine Subscription </u></h1>
+<form name = "form1" method = "POST" action = "http://localhost:8888/seven/receiver.php">
+Name: <input type = "text" name = "name"/> <br>
+Telephone: <input type = "text" name = "telephone"/> <br>
+Subscription Duration: 
+<select name = "duration">
+<option value = "1 month" selected> One Month </option>
+<option value = "6 month"> Six Month </option>
+<option value = "1 year"> One Year </option>
+</select> <br>
+Do you like to subscribe to our newsletter ? Yes 
+<input type = "radio" name = "subscribe" value = "Yes" checked/> No
+<input type = "radio" name = "subscribe" value = "No"/> <br>
+<input type = "submit" name = "cmd1" value = "Send"/>
+<input type = "reset" name = "cmd2" value = "Cancel"/>
+</form>
+</body>
+</html>

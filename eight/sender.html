@@ -1,0 +1,79 @@
+<html><head>
+<script language = "javascript" type = "text/javascript">
+function validate(){
+    if(document.form1.name.value == ""){
+        window.alert("Please enter name");
+        return false;
+    }
+    if(document.form1.address.value.length == 0){
+        window.alert("Please enter address");
+        return false;
+    }
+    if(document.form1.telephone.value == ""){
+        window.alert("Please enter telephone number");
+        return false;
+    }
+    if(isNaN(document.form1.telephone.value)){
+        window.alert("Telephone number can have only numerals");
+        return false;
+    }
+    if(document.form1.telephone.value.length <10){
+        window.alert("Telephone number should contain 10 characters");
+        return false;
+    }
+    if(isNaN(document.form1.courseNo.value)){
+        window.alert("Course number can have only numerals");
+        return false;
+    }
+    if(document.form1.courseNo.value == ""){
+        window.alert("Please enter course number");
+        return false;
+    }
+    // radio button group validation - method 1
+    if((!document.form1.sponsor[0].checked)&&(!document.form1.sponsor[1].checked)){
+        window.alert("Are you sponsored by your oraganization ?");
+        return false;
+    }
+    /* radio button group validation - method 2 
+        var status = "no";
+        for(i=0; i<document.form1.sponsor.length; i++){
+            if(document.form1.sponsor[i].checked){
+                status = "yes";
+            }
+        }
+        if(status == "no"){
+            window.alert("Are you sponsored by your oraganization ?");
+            return false;
+        }
+    */
+    if(document.form1.center.selectedIndex == 0) {
+        window.alert("Please select a course center");
+        return false;
+    }
+    window.alert("Thank you for the reservation");
+}
+</script>
+</head>
+<body>
+<h1><u> Colombo Institute of Education </u></h1>
+<h2><u> Course Registration Form </u></h2>
+<form name = "form1" method = "POST" action = "http://localhost:8888/eight/receiver.php" onsubmit = "return validate();">
+Name: <input type = "text" name = "name"/> <br>
+Address: <input type = "text" name = "address"/> <br>
+Telephone: <input type = "text" name = "telephone"/> <br>
+Selected Course No: <input type = "text" name = "courseNo"/> <br>
+Are you sponsored by your organization ? 
+<input type = "radio" name = "sponsor" value = "Yes"> Yes 
+<input type = "radio" name = "sponsor" value = "No"> No <br>
+Please select a center to follow the course: 
+<select name = "center">
+<option value = "S-C" selected> Select Center</option>
+<option value = "Colombo">Colombo</option>
+<option value = "Kandy">Kandy</option>
+<option value = "Matara">Matara</option>
+</select> <br>
+<input type = "submit" name = "cmd1" value = "Register" />
+<input type = "reset" name = "cmd2" value = "Cancel"/>
+</form>
+</body>
+</html>

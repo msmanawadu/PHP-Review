@@ -1,0 +1,31 @@
+<html>
+<head>
+<script language = "javascript" type = "text/javascript">
+function validate(){
+    if(document.form1.name.value.length == 0){
+        window.alert("Please enter name");
+        return false;
+    }
+    if(document.form1.email.value == ""){
+        window.alert("Please enter email");
+        return false;
+    }
+    if(document.form1.cmd1.value == ""){
+        window.alert("Please upload your CV");
+        return false;
+    }
+    window.alert("Thank you for your information");
+}
+</script>
+</head>
+<body>
+<h2><u> Application Form </u></h2>
+<form name = "form1" method = "POST" action = "http://localhost:8888/ten/receiver.php" enctype = "multipart/form-data" onsubmit = "return validate();">
+Name: <input type = "text" name = "name"/> <br>
+Email: <input type = "text" name = "email"/> <br>
+CV: <input type = "file" name = "cmd1"/> <br>
+<input type = "submit" name = "cmd2" value = "Send Application"/>
+<input type = "reset" name = "cmd3" value = "Reset"/>
+</form>
+</body>
+</html>

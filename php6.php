@@ -1,5 +1,5 @@
 <?php
-    setcookie("Great","1000",time()+3600);
+    setcookie("Good","Be a good student, be happy",time()+3600);
 ?>
 <html><head></head>
 <body>
